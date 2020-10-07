@@ -1,0 +1,46 @@
+
+:root {
+    --color-primary-light: #B6AAB7;
+    --color-primary-dark: #281E29;
+
+    --color-grey: #847D84;
+    --color-white: #fff;
+}
+
+$bp-largest: 93.75em;        //1500px
+$bp-large: 75em;        //1200px
+$bp-medium: 56.25em;      //900px
+$bp-small: 37.5em;        //600px
+$bp-smallest: 31.25em;    //500px
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px; 10px/16px(browser default) = 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--color-grey);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: [header-start] 100vh [header-end products-start] min-content [products-end features-start] min-content [features-end collections-start] min-content [collections-end footer-start] min-content [footer-end];
+}

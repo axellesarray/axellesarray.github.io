@@ -1,0 +1,16 @@
+.footer {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 2.5rem;
+    }
+
+
+    &__nav {
+        margin-top: 2rem;
+    }
+}
