@@ -12,7 +12,7 @@
 
     @media only screen and (max-width: $bp-medium) {
         flex-direction: column;
-        
+        padding: 14rem 2.5rem;
     }
 
     &__heading {
@@ -35,7 +35,7 @@
         grid-column-gap: 5rem;
         grid-row-gap: 5rem;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-        align-items: center;
+        align-items: flex-start;
 
         @media only screen and (max-width: $bp-large) {
             grid-column-gap: 2rem;
@@ -43,6 +43,7 @@
 
         @media only screen and (max-width: $bp-medium) {
             grid-template-columns: repeat(auto-fit, 1fr);
+            grid-column-gap: 2.5rem;
         }
     }
 
