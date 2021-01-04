@@ -1,0 +1,14 @@
+{
+  "name": "room",
+  "version": "1.0.0",
+  "description": "![Design preview for the Room homepage coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass styles.scss styles.css -w"
+  },
+  "author": "axelle",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

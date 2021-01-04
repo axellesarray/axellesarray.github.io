@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap");
+@keyframes moveFromLeft {
+  from {
+    left: -100%; }
+  to {
+    left: 0%; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  overflow-x: hidden;
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -0.06rem;
+  color: black;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 55% 10% 35%;
+  grid-auto-rows: 30rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      grid-template-rows: 55% 10% min-content 35rem min-content 35rem; } }
+
+.heading--1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+  line-height: 1.2; }
+
+.heading--2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6rem;
+  margin-bottom: 2rem;
+  line-height: 1.5; }
+
+.main-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #a1a1a1; }
+
+.img-hero {
+  grid-column: 1 / 8;
+  grid-row: 1 / 3;
+  background-image: url(images/desktop-image-hero-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 56.25em) {
+    .img-hero {
+      grid-column: 1 / 13;
+      grid-row: 1 / 3; } }
+
+.burger {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .burger {
+      display: block; } }
+
+.close {
+  display: none; }
+
+.navbar {
+  padding: 7rem 10rem;
+  display: flex;
+  align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar {
+      padding: 7rem 5rem;
+      justify-content: space-between; } }
+  .navbar__logo {
+    width: 9rem;
+    margin-right: 7rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__logo {
+        width: 12rem;
+        margin: 0 auto; } }
+  .navbar__links {
+    list-style: none;
+    display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__links {
+        display: none; } }
+  .navbar__link-el a:link,
+  .navbar__link-el a:visited {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: padding-bottom 1s; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__link-el a:link,
+      .navbar__link-el a:visited {
+        color: black;
+        font-size: 2rem; } }
+  .navbar__link-el a:not(last-child) {
+    margin-right: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .navbar__link-el a:not(last-child) {
+        margin-right: 2rem; } }
+  .navbar__link-el a:hover,
+  .navbar__link-el a:active {
+    padding-bottom: 1rem;
+    border-bottom: 0.2rem solid white; }
+
+.nav-active {
+  background-color: white;
+  z-index: 1 !important;
+  transition: all 0.5s;
+  position: fixed;
+  width: 100%; }
+
+.links-active {
+  display: flex;
+  z-index: 1 !important;
+  transition: all 1s ease-in; }
+
+.opacity-0 {
+  opacity: 0; }
+
+.display-block {
+  display: block;
+  transition: all 1s; }
+
+.display-none {
+  display: none;
+  transition: all 1s; }
+
+.gradient-background {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), 30%, transparent); }
+
+.img-dark {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  background-image: url(images/image-about-dark.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 56.25em) {
+    .img-dark {
+      grid-column: 1 / 13;
+      grid-row: 4 / 5; } }
+
+.img-light {
+  grid-column: 10 / 13;
+  grid-row: 3 / 4;
+  background-image: url(images/image-about-light.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media only screen and (max-width: 56.25em) {
+    .img-light {
+      grid-column: 1 / 13;
+      grid-row: 6 / 7; } }
+
+.btn-pack {
+  grid-column: 8 / 10;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  cursor: pointer; }
+  @media only screen and (max-width: 56.25em) {
+    .btn-pack {
+      grid-column: 10 / 13;
+      grid-row: 2 / 3; } }
+  @media only screen and (max-width: 37.5em) {
+    .btn-pack {
+      grid-column: 8 / 13; } }
+  .btn-pack__left {
+    outline: none;
+    border: none;
+    color: inherit;
+    background-color: black; }
+  .btn-pack__right {
+    outline: none;
+    border: none;
+    color: inherit;
+    background-color: black; }
+  .btn-pack__left:hover, .btn-pack__right:hover {
+    background-color: #454545;
+    transition: background-color 1s; }
+
+.section-hero {
+  grid-column: 8 / 13;
+  grid-row: 1 / 2;
+  place-self: center;
+  width: 70%; }
+  @media only screen and (max-width: 56.25em) {
+    .section-hero {
+      grid-column: 1 / 13;
+      grid-row: 3 / 4; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-hero {
+      padding: 10rem 0; } }
+  .section-hero__ca {
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    margin-top: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 1s; }
+    @media only screen and (max-width: 56.25em) {
+      .section-hero__ca {
+        margin-top: 6rem; } }
+    .section-hero__ca--text {
+      font-family: "Spartan", sans-serif;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5rem;
+      margin-right: 3.5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .section-hero__ca--text {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .section-hero__ca--text {
+          font-size: 1.5rem;
+          letter-spacing: 1rem;
+          margin-right: 2rem; } }
+  .section-hero__ca:hover, .section-hero__ca:active {
+    color: #a1a1a1;
+    fill: #a1a1a1; }
+  .section-hero__ca:hover .section-hero__ca--arrow {
+    transform: translateX(20px);
+    fill: #a1a1a1;
+    transition: all 0.5s; }
+
+.section-about {
+  grid-column: 4 / 10;
+  grid-row: 3 / 4;
+  place-self: center;
+  width: 80%; }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      grid-column: 1 / 13;
+      grid-row: 5 / 6; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      width: 70%;
+      padding: 10rem 0; } }
