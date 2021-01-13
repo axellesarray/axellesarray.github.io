@@ -74,7 +74,7 @@ body {
   max-width: 80vw;
   margin: 0 auto;
   padding: 5rem 0;
-  transition: all 0.5s, color 2s, background-color 2s;
+  transition: all 0.5s, color 1s, background-color 1s;
 
   @media only screen and (max-width: $bp-largest) {
     padding: 8rem 0;
@@ -104,12 +104,12 @@ body {
 
 .card {
   background-color: var(--card-background);
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   padding: 3rem;
   box-shadow: rgba(0, 0, 0, 0.3) -4px 9px 20px -6px;
   cursor: pointer;
-  transition: background-color 2s;
+  transition: background-color 1s;
 
   &:hover {
     background-color: var(--card-background-hover);
@@ -126,9 +126,20 @@ body {
 }
 
 .border-instagram {
-  border-top: 0.5rem solid transparent;
-  border-image: linear-gradient(to right, $color-instagram) 10;
+  // border-top: 0.5rem solid $color-instagram;
+  // border-image: linear-gradient(to right, #fdc468, #df4996) 10;
+  position: relative;
   overflow: hidden;
+}
+
+.border-instagram::after {
+  content: "";
+  background-image: linear-gradient(to right, #fdc468, #df4996);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0.5rem;
+  width: 100%;
 }
 
 .border-youtube {
@@ -158,6 +169,10 @@ body {
   font-size: 3.5rem;
   font-weight: $font-bold;
   margin-bottom: 0.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 3rem;
+  }
 }
 
 .heading-2 {
@@ -197,7 +212,7 @@ body {
     align-items: center;
 
     @media only screen and (max-width: $bp-small) {
-      margin-top: 3rem;
+      margin-top: 4.5rem;
       justify-content: space-between;
     }
   }
