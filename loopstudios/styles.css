@@ -108,6 +108,9 @@ a:active::after {
   .heading__2 {
     font-size: 5rem;
     color: black; }
+    @media only screen and (max-width: 37.5em) {
+      .heading__2 {
+        font-size: 4rem; } }
   .heading__3 {
     font-size: 3.5rem;
     color: white;
@@ -139,7 +142,7 @@ a:active::after {
     padding: 6rem 0; }
     @media only screen and (max-width: 84.5em) {
       .header__navbar-container {
-        width: 80%; } }
+        width: 85%; } }
     @media only screen and (max-width: 50em) {
       .header__navbar-container {
         padding: 5rem 0; } }
@@ -156,7 +159,7 @@ a:active::after {
       @media only screen and (max-width: 50em) {
         .header__navbar--menu {
           flex-direction: column;
-          padding-left: 10%;
+          padding-left: 5%;
           padding-top: 8rem; } }
   .header .header__navbar nav {
     position: static;
@@ -195,7 +198,7 @@ a:active::after {
         display: block;
         position: absolute;
         top: 5.8rem;
-        right: 10%; } }
+        right: 5%; } }
   .header__heading-container {
     display: flex;
     flex-direction: column;
@@ -227,7 +230,7 @@ a:active::after {
   align-items: flex-end; }
   @media only screen and (max-width: 84.5em) {
     .section-leader {
-      width: 80%; } }
+      width: 85%; } }
   @media only screen and (max-width: 65.65em) {
     .section-leader {
       display: block; } }
@@ -273,7 +276,7 @@ a:active::after {
   margin: 20rem auto; }
   @media only screen and (max-width: 84.5em) {
     .section-creations {
-      width: 80%; } }
+      width: 85%; } }
   @media only screen and (max-width: 50em) {
     .section-creations {
       margin: 10rem auto; } }
@@ -319,7 +322,8 @@ a:active::after {
         margin: 4rem auto; } }
   @media only screen and (max-width: 37.5em) {
     .section-creations h2 {
-      margin: 0 auto; } }
+      margin: 0 auto;
+      text-align: center; } }
   .section-creations__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -376,7 +380,7 @@ a:active::after {
     justify-content: space-between; }
     @media only screen and (max-width: 84.5em) {
       .footer__container {
-        width: 80%; } }
+        width: 85%; } }
     @media only screen and (max-width: 50em) {
       .footer__container {
         flex-direction: column; } }

@@ -171,6 +171,10 @@ a:active {
   &__2 {
     font-size: 5rem;
     color: $color-black;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 4rem;
+    }
   }
 
   &__3 {
@@ -214,7 +218,7 @@ a:active {
     padding: 6rem 0;
 
     @media only screen and (max-width: $bp-large) {
-      width: 80%;
+      width: 85%;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -238,7 +242,7 @@ a:active {
 
       @media only screen and (max-width: $bp-small) {
         flex-direction: column;
-        padding-left: 10%;
+        padding-left: 5%;
         padding-top: 8rem;
       }
     }
@@ -291,7 +295,7 @@ a:active {
       display: block;
       position: absolute;
       top: 5.8rem;
-      right: 10%;
+      right: 5%;
     }
   }
 
@@ -343,7 +347,7 @@ a:active {
   align-items: flex-end;
 
   @media only screen and (max-width: $bp-large) {
-    width: 80%;
+    width: 85%;
   }
   @media only screen and (max-width: $bp-medium) {
     display: block;
@@ -406,7 +410,7 @@ a:active {
   margin: 20rem auto;
 
   @media only screen and (max-width: $bp-large) {
-    width: 80%;
+    width: 85%;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -471,6 +475,7 @@ a:active {
   & h2 {
     @media only screen and (max-width: $bp-smallest) {
       margin: 0 auto;
+      text-align: center;
     }
   }
 
@@ -567,7 +572,7 @@ a:active {
     justify-content: space-between;
 
     @media only screen and (max-width: $bp-large) {
-      width: 80%;
+      width: 85%;
     }
 
     @media only screen and (max-width: $bp-small) {
