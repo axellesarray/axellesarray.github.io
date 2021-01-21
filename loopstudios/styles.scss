@@ -86,22 +86,28 @@ body {
       font-size: 4rem;
       transition: transform 0.5s;
 
+      @media only screen and (max-height: 37.5em) {
+        // 600px
+        font-size: 2rem;
+      }
+
       & a:link,
       a:visited {
         &::after {
           bottom: -1rem;
-          left: 0rem;
+          left: 0;
           right: 0;
-          width: 100%;
+          margin: 0;
+          width: 30%;
         }
       }
       &:hover {
-        transform: skewX(-5deg);
+        transform: skewX(-2deg);
       }
     }
     &:not(:last-child) {
       @media only screen and (max-width: $bp-small) {
-        margin: 0 0 6rem 0;
+        margin: 0 0 5rem 0;
       }
     }
   }
@@ -208,7 +214,11 @@ a:active {
     padding: 6rem 0;
 
     @media only screen and (max-width: $bp-large) {
-      width: 90%;
+      width: 80%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 5rem 0;
     }
   }
 
@@ -218,7 +228,7 @@ a:active {
     justify-content: space-between;
 
     &--logo {
-      width: 22rem;
+      width: 24rem;
       height: auto;
       z-index: 10;
     }
@@ -228,7 +238,8 @@ a:active {
 
       @media only screen and (max-width: $bp-small) {
         flex-direction: column;
-        padding-left: 5%;
+        padding-left: 10%;
+        padding-top: 8rem;
       }
     }
   }
@@ -279,9 +290,8 @@ a:active {
     @media only screen and (max-width: $bp-small) {
       display: block;
       position: absolute;
-      top: 6rem;
-      bottom: 0;
-      right: 5%;
+      top: 5.8rem;
+      right: 10%;
     }
   }
 
@@ -333,7 +343,7 @@ a:active {
   align-items: flex-end;
 
   @media only screen and (max-width: $bp-large) {
-    width: 90%;
+    width: 80%;
   }
   @media only screen and (max-width: $bp-medium) {
     display: block;
@@ -396,7 +406,7 @@ a:active {
   margin: 20rem auto;
 
   @media only screen and (max-width: $bp-large) {
-    width: 90%;
+    width: 80%;
   }
 
   @media only screen and (max-width: $bp-small) {
@@ -557,7 +567,7 @@ a:active {
     justify-content: space-between;
 
     @media only screen and (max-width: $bp-large) {
-      width: 90%;
+      width: 80%;
     }
 
     @media only screen and (max-width: $bp-small) {
@@ -601,7 +611,7 @@ a:active {
       margin: 0 auto;
     }
     & p {
-      margin-top: 2.5rem;
+      margin-top: 2rem;
       @media only screen and (max-width: $bp-small) {
         margin-top: 1.5rem;
       }
@@ -624,7 +634,7 @@ a:active {
     height: auto;
 
     &:not(:last-child) {
-      margin-right: 1.2rem;
+      margin-right: 1.5rem;
 
       @media only screen and (max-width: $bp-small) {
         margin-right: 2rem;
