@@ -32,27 +32,32 @@ const heroSlide = () => {
   const heroHeader = document.querySelector(".heading--1");
   const heroParagraph = document.querySelector(".section-hero__p");
 
-  next.addEventListener("click", () => {
-    currentPage++;
-    if (currentPage > data.length - 1) {
-      currentPage = 0;
-    }
-    heroImg.style.backgroundImage = `url(${data[currentPage].image})`;
+  const updateBackground = () => {
+    heroImg.style.backgroundImage = `url(${data[currentPage].image}`;
+    // heroImg.style.transition = "background-image 2s";
     heroHeader.innerHTML = data[currentPage].header;
     // heroHeader.classList.add("moveFromLeft");
     heroParagraph.innerHTML = data[currentPage].paragraph;
-    console.log(currentPage);
+  };
+
+  next.addEventListener("click", () => {
+    setTimeout(function () {
+      currentPage++;
+      if (currentPage > data.length - 1) {
+        currentPage = 0;
+      }
+      updateBackground();
+    }, 300);
   });
 
   prev.addEventListener("click", () => {
-    currentPage--;
-    if (currentPage < 0) {
-      currentPage = data.length - 1;
-    }
-    heroImg.style.backgroundImage = `url(${data[currentPage].image})`;
-    heroHeader.innerHTML = data[currentPage].header;
-    heroParagraph.innerHTML = data[currentPage].paragraph;
-    console.log(currentPage);
+    setTimeout(function () {
+      currentPage--;
+      if (currentPage < 0) {
+        currentPage = data.length - 1;
+      }
+      updateBackground();
+    }, 300);
   });
 };
 
@@ -74,12 +79,14 @@ const navMobile = () => {
   });
 
   close.addEventListener("click", () => {
-    navbar.classList.remove("nav-active");
     navbar.classList.add("gradient-background");
     navbarLinks.classList.remove("links-active");
     logo.classList.remove("display-none");
     close.classList.remove("display-block");
     burger.classList.remove("display-none");
+    setTimeout(function () {
+      navbar.classList.remove("nav-active");
+    }, 1000);
   });
 };
 

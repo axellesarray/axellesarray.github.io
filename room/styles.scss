@@ -59,13 +59,12 @@ body {
   line-height: 1.6;
   letter-spacing: -0.06rem;
   color: $color-black;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 55% 10% 35%;
-
   grid-auto-rows: 30rem;
 
   @media only screen and (max-width: $bp-medium) {
@@ -80,7 +79,7 @@ body {
     font-weight: $font-semi-bold;
     margin-bottom: 3.5rem;
     line-height: 1.2;
-
+    // transition: all 1s;
     // animation: moveFromleft 1.5s ease forwards;
   }
 
@@ -247,6 +246,8 @@ body {
   grid-column: 10 / 13;
   grid-row: 3 / 4;
 
+  position: relative;
+
   @media only screen and (max-width: $bp-medium) {
     grid-column: 1 / 13;
     grid-row: 6 / 7;
@@ -280,6 +281,8 @@ body {
     border: none;
     color: inherit;
     background-color: $color-black;
+
+    transition: background-color 1s;
   }
 
   &__right {
@@ -287,12 +290,13 @@ body {
     border: none;
     color: inherit;
     background-color: $color-black;
+
+    transition: background-color 1s;
   }
 
   &__left:hover,
   &__right:hover {
     background-color: $color-very-dark-gray;
-    transition: background-color 1s;
     cursor: pointer;
   }
 }
@@ -335,25 +339,26 @@ body {
 
     &--text {
       font-family: $font-Spartan;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
 
       @media only screen and (max-width: $bp-medium) {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       @media only screen and (max-width: $bp-small) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         letter-spacing: 1rem;
         margin-right: 2rem;
       }
 
       text-transform: uppercase;
-      letter-spacing: 1.5rem;
+      letter-spacing: 1.2rem;
       margin-right: 3.5rem;
     }
 
-    // &--arrow {
-    // }
+    &--arrow {
+      transition: all 0.5s;
+    }
   }
 
   &__ca:hover,
@@ -365,7 +370,6 @@ body {
   &__ca:hover .section-hero__ca--arrow {
     transform: translateX(20px);
     fill: $color-dark-gray;
-    transition: all 0.5s;
   }
 }
 
@@ -385,5 +389,33 @@ body {
   @media only screen and (max-width: $bp-medium) {
     width: 70%;
     padding: 10rem 0;
+  }
+}
+
+// Credits
+.credits {
+  & p {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: $color-white;
+    font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    padding: 1rem;
+    text-align: right;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+
+    & a:link,
+    a:active,
+    a:visited,
+    a:hover {
+      color: $color-white;
+      text-decoration: none;
+      padding-bottom: 0.2rem;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+    }
   }
 }
