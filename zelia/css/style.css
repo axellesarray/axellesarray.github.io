@@ -31,14 +31,14 @@ body {
   grid-template-rows: [header-start] 100vh [header-end products-start] min-content [products-end features-start] min-content [features-end collections-start] min-content [collections-end footer-start] min-content [footer-end]; }
 
 body {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   color: var(--color-grey); }
 
 .logo {
   font-size: 6rem;
-  font-family: 'David Libre', serif; }
+  font-family: "David Libre", serif; }
   .logo--white {
     color: var(--color-white); }
   .logo--color-primary-dark {
@@ -51,7 +51,7 @@ body {
   color: var(--color-white);
   font-weight: 700;
   font-size: 16rem;
-  line-height: .8;
+  line-height: 0.8;
   z-index: 10; }
   .heading-1 span {
     color: var(--color-white);
@@ -78,7 +78,7 @@ body {
   color: var(--color-white);
   font-weight: 700;
   font-size: 6rem;
-  line-height: 1.2; }
+  line-height: 1; }
   @media only screen and (max-width: 75em) {
     .heading-2 {
       font-size: 5rem; } }
@@ -94,7 +94,7 @@ body {
 .btn {
   background-color: transparent;
   color: var(--color-primary-light);
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   width: 12rem;
@@ -102,11 +102,11 @@ body {
   padding: 1.2rem 0;
   cursor: pointer;
   outline: none;
-  transition: all .5s; }
+  transition: all 0.5s; }
   .btn:hover, .btn:active {
     background-color: var(--color-primary-dark);
     color: var(--color-white);
-    border: none; }
+    border: 1px solid var(--color-primary-dark); }
   .btn__white {
     color: var(--color-white);
     border: 1px solid var(--color-white); }
@@ -122,7 +122,7 @@ body {
     justify-self: start; }
 
 .margin-r-sm {
-  margin-right: .5rem; }
+  margin-right: 0.5rem; }
 
 .header {
   background-image: linear-gradient(rgba(182, 170, 183, 0.8), rgba(182, 170, 183, 0.8)), url(../img/hero-br.jpg);
@@ -244,12 +244,10 @@ body {
     cursor: pointer; }
     .products__item:hover .products__item-arrow {
       color: var(--color-primary-dark);
-      transform: translateX(-20px);
-      transition: all .5s; }
+      transform: translateX(-20px); }
     .products__item:hover .products__item-name,
     .products__item:hover .products__item-price {
-      color: var(--color-primary-dark);
-      transition: all .5s; }
+      color: var(--color-primary-dark); }
   .products__item-photo {
     grid-column: 1 / -1;
     width: 100%;
@@ -259,19 +257,22 @@ body {
     margin-bottom: 3rem;
     overflow: hidden;
     backface-visibility: hidden;
-    transition: all .5s; }
+    transition: all 0.5s; }
     .products__item-photo:hover {
       transform: scale(1.02); }
   .products__item-name {
     grid-column: 1 / span 1;
     grid-row: 2 / span 1;
-    font-weight: 700; }
+    font-weight: 700;
+    transition: all 0.5s; }
   .products__item-price {
     grid-column: 1 / span 1;
     grid-row: 3 / span 1;
-    font-weight: 400; }
+    font-weight: 400;
+    transition: all 0.5s; }
   .products__item-arrow {
-    justify-self: end; }
+    justify-self: end;
+    transition: all 0.5s; }
 
 .features {
   background-color: var(--color-primary-dark);
@@ -288,7 +289,8 @@ body {
       flex-direction: column;
       padding: 14rem 2.5rem; } }
   .features__heading {
-    width: 40vw; }
+    width: 40vw;
+    margin-right: 5rem; }
     @media only screen and (max-width: 93.75em) {
       .features__heading {
         width: 45vw;
@@ -313,24 +315,24 @@ body {
   .features__box {
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-column-gap: .8rem;
+    grid-column-gap: 0.8rem;
     grid-row-gap: 1rem; }
     .features__box:hover .features__p {
-      color: var(--color-white);
-      transition: all .5s; }
+      color: var(--color-white); }
     .features__box:hover .features__arrow {
       color: var(--color-white);
-      transform: translateX(-20px);
-      transition: all .5s; }
+      transform: translateX(-5px); }
   .features__arrow {
     color: var(--color-primary-light);
     text-align: center;
     border: 1px solid var(--color-primary-light);
     border-radius: 50%;
     width: 2.3rem;
-    height: 2.3rem; }
+    height: 2.3rem;
+    transition: all 0.5s; }
   .features__p {
-    grid-column: 2 / -1; }
+    grid-column: 2 / -1;
+    transition: all 0.5s; }
 
 .collections {
   display: grid;
@@ -381,12 +383,10 @@ body {
     padding: 3rem 0;
     color: var(--color-white); }
     .collections__text-box:hover .collections__heading-2 {
-      transform: translateX(-20px);
-      transition: all .5s; }
+      transform: translateX(-5px); }
       @media only screen and (max-width: 37.5em) {
         .collections__text-box:hover .collections__heading-2 {
-          transform: translateX(-2px);
-          transition: all .5s; } }
+          transform: translateX(-2px); } }
     @media only screen and (max-width: 56.25em) {
       .collections__text-box {
         justify-self: start;
@@ -412,8 +412,12 @@ body {
         .collections__text-box--summer {
           grid-column: 1 / span 2;
           grid-row: 2 / span 1; } }
+  .collections__heading-2 {
+    transition: all 0.5s; }
+    .collections__heading-2 span {
+      font-size: 3.5rem; }
   .collections__p {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     width: 70%; }
     @media only screen and (max-width: 56.25em) {
@@ -425,9 +429,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   @media only screen and (max-width: 37.5em) {
     .footer {
-      padding: 2.5rem 1rem; } }
+      padding: 2.5rem 1rem 8rem 1rem; } }
   .footer__nav {
     margin-top: 2rem; }
+
+.credits p {
+  position: absolute;
+  bottom: 0rem;
+  right: 0rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-white);
+  font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  padding: 1rem;
+  text-align: right;
+  line-height: 1.5;
+  letter-spacing: 0.8px; }
+  .credits p a:link,
+  .credits p a:active,
+  .credits p a:visited,
+  .credits p a:hover {
+    color: var(--color-white);
+    text-decoration: none;
+    padding-bottom: 0.2rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.5); }
