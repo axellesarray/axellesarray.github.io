@@ -62,6 +62,10 @@ body {
   }
 }
 
+.relative {
+  position: relative;
+}
+
 // Desktop Menus (Header and Footer)
 .menu-item {
   list-style: none;
@@ -312,9 +316,6 @@ a:active {
   @keyframes showNav {
     0% {
       transform: translateX(100vw);
-    }
-    1% {
-      //   display: flex;
       visibility: visible;
     }
     100% {
@@ -327,11 +328,9 @@ a:active {
       transform: translateX(0);
       z-index: 3;
     }
-    99% {
-      transform: translateX(100vw);
-    }
     100% {
       //   display: none;
+      transform: translateX(100vw);
       visibility: hidden;
     }
   }
@@ -644,6 +643,34 @@ a:active {
       @media only screen and (max-width: $bp-small) {
         margin-right: 2rem;
       }
+    }
+  }
+}
+
+// Credits
+.credits {
+  & p {
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: $color-white;
+    font-family: "Helvetica Neue", Helvetica, "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    padding: 1rem;
+    text-align: right;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+
+    & a:link,
+    a:active,
+    a:visited,
+    a:hover {
+      color: $color-white;
+      text-decoration: none;
+      padding-bottom: 0.2rem;
+      border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
     }
   }
 }
