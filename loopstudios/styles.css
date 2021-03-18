@@ -450,3 +450,8 @@ a:active::after {
     text-decoration: none;
     padding-bottom: 0.2rem;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.5); }
+  .credits p a:link::after,
+  .credits p a:active::after,
+  .credits p a:visited::after,
+  .credits p a:hover::after {
+    background-color: transparent; }

@@ -672,5 +672,12 @@ a:active {
       padding-bottom: 0.2rem;
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
     }
+
+    & a:link::after,
+    a:active::after,
+    a:visited::after,
+    a:hover::after {
+      background-color: transparent;
+    }
   }
 }
