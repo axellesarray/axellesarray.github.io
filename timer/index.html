@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+
+    <title>Frontend Mentor | Launch countdown timer</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main-content">
+        <div class="countdown-container">
+          <h2 class="countdown-container__h2">We're launching soon</h2>
+
+          <div class="countdown-container__block">
+            <div class="countdown-container__card">
+              <div class="countdown-container__card--data">
+                <div class="countdown-container__card--data--upper"></div>
+                <p class="countdown-container__card--data--p" id="days"></p>
+                <div class="countdown-container__card--data--lower"></div>
+              </div>
+              <p class="countdown-container__card--unit">days</p>
+            </div>
+
+            <div class="countdown-container__card">
+              <div class="countdown-container__card--data">
+                <div class="countdown-container__card--data--upper"></div>
+                <p class="countdown-container__card--data--p" id="hours"></p>
+                <div class="countdown-container__card--data--lower"></div>
+              </div>
+              <p class="countdown-container__card--unit">hours</p>
+            </div>
+
+            <div class="countdown-container__card">
+              <div class="countdown-container__card--data">
+                <div class="countdown-container__card--data--upper"></div>
+                <p class="countdown-container__card--data--p" id="minutes"></p>
+                <div class="countdown-container__card--data--lower"></div>
+              </div>
+              <p class="countdown-container__card--unit">minutes</p>
+            </div>
+
+            <div class="countdown-container__card">
+              <div class="countdown-container__card--data">
+                <div class="countdown-container__card--data--upper"></div>
+                <p class="countdown-container__card--data--p" id="seconds"></p>
+                <div class="countdown-container__card--data--lower"></div>
+              </div>
+              <p class="countdown-container__card--unit">seconds</p>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <ul class="social-container">
+            <li>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+      <div class="credits">
+        <p>
+          Challenge by
+          <a href="https://www.frontendmentor.io/" target="_blank"
+            >Frontend Mentor</a
+          >. Code by
+          <a href="https://www.axellesarray.com" target="_blank"
+            >Axelle Sarray</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

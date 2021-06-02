@@ -1,0 +1,14 @@
+{
+  "name": "countdown-timer",
+  "version": "1.0.0",
+  "description": "![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass styles.scss styles.css -w"
+  },
+  "author": "Axelle Sarray",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.0"
+  }
+}
