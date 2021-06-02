@@ -26,8 +26,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 7.5px;
-  background: linear-gradient(to bottom, #1e1f29 65%, rgba(251, 96, 135, 0.2));
-  position: absolute; }
+  background: linear-gradient(to bottom, #1e1f29 65%, rgba(251, 96, 135, 0.2)); }
 
 .main-container {
   width: 100%;
